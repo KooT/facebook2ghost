@@ -13,3 +13,8 @@ On linux ENV variable must be set:
 export FB_SITE=''
 export FB_ACCESSTOKEN=''
 ```
+
+## Running
+```javascript
+nodejs import.js
+```
