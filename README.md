@@ -16,6 +16,12 @@ export FB_SITE=''
 export FB_ACCESSTOKEN=''
 ```
 
+FB_SITE format
+```
+export FB_SITE='/mysite/posts'
+export FB_SITE='/1231234234234/posts'
+```
+
 ## Running
 ```javascript
 nodejs import.js
