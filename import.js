@@ -3,6 +3,7 @@
 var FB = require('fb');
 var async = require('async'); 
 var moment = require('moment');
+var fs = require('fs');
 
 var posts = []; 
 
@@ -32,7 +33,25 @@ FB.api(process.env.FB_SITE, function(res) {
 	    posts.push(post);
 	    callback();
 	}, function(err) {
-	    console.log(posts);
+	    console.log(posts); i
+	var imp = {
+		    "meta":{
+			            // epoch time in milliseconds
+			    "exported_on":  1388805572000,
+			    // Data version, current is 003
+			    "version":      "003"
+		   },
+                   "data":{
+		       "posts": posts
+		   }
+	};
+	fs.writeFile("import.json", JSON.stringify(imp), function(err) {
+    		if(err) {
+        		console.log(err);
+    		} else {
+        		console.log("The file was saved!");
+    		}
+		}); 
 	}); 
 });
 
