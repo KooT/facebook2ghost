@@ -17,7 +17,8 @@ FB.api(process.env.FB_SITE, function(res) {
 	    }
 	    var post = {
 		"id": item.id.toString().split("_")[1],
-		"title": "Post",
+		"slug": slugify(item.message.substring(0,50)),
+		"title": item.message.substring(0,50) + "...",
 		"html": item.message,
 		"image": null,
 		"featured": 0,
@@ -35,3 +36,12 @@ FB.api(process.env.FB_SITE, function(res) {
 	}); 
 });
 
+function slugify(text) {
+
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')        // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')   // Remove all non-word chars
+      .replace(/\-\-+/g, '-')      // Replace multiple - with single -
+      .replace(/^-+/, '')          // Trim - from start of text
+      .replace(/-+$/, '');         // Trim - from end of text
+}
