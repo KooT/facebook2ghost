@@ -5,7 +5,7 @@ Import posts from fanpage into ghost blog
 ## Requirements
 ```javascript
 npm install fb
-npm install fb
+npm install async
 ```
 
 On linux ENV variable must be set:
