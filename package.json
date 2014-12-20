@@ -1,0 +1,30 @@
+
+{
+  "name": "facebook2json",
+  "version": "0.0.1",
+  "description": "Import facebook posts to ghost blog",
+  "author": "Rafał Kot<rafalkot@gmail.com>",
+  "main": "lib/import.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/KooT/facebook2ghost"
+},
+  "bugs": {
+  "url": "https://github.com/KooT/facebook2ghost/issues"
+},
+  "keywords": [
+  "ghost",
+  "import",
+  "migrate",
+  "facebook"
+],
+  "dependencies": {
+    "async": "*",
+    "fb": "*",
+    "moment": "*"
+  },
+  "preferGlobal": false,
+  "private": false,
+  "license": "MIT"
+}
+  
